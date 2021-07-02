@@ -12,9 +12,10 @@ finalrose_colors <- c(
  `Deep green` = "#214540")
 
 
+
 #' Title
 #'
-#' @param ... Character names of finalrose_colors
+#' @param ... Character names of firstflower_colors
 #'
 #' @return
 #' @export
@@ -41,11 +42,12 @@ finalrose_palettes <- list(
 
 
 
+
 #' Title
 #'
-#' @param palette Character name of palette in finalrose_palettes
-#' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments to pass to colorRampPalette()
+#' @param palette
+#' @param reverse
+#' @param ...
 #'
 #' @return
 #' @export
@@ -63,13 +65,13 @@ finalrose_pal <- function(palette = "full", reverse = FALSE, ...) {
 
 
 
-#' scale_color_finalrose
+
+#' Title
 #'
-#' @param palette Character name of palette in finalrose_palettes
-#' @param discrete Boolean indicating whether color aesthetic is discrete or not
-#' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments passed to discrete_scale() or
-#'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
+#' @param palette
+#' @param discrete
+#' @param reverse
+#' @param ...
 #'
 #' @return
 #' @export
@@ -87,13 +89,13 @@ scale_color_finalrose <- function(palette = "full", discrete = TRUE, reverse = F
 
 
 
-#' scale_fill_finalrose
+
+#' Title
 #'
-#' @param palette Character name of palette in finalrose_palettes
-#' @param discrete Boolean indicating whether color aesthetic is discrete or not
-#' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments passed to discrete_scale() or
-#'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
+#' @param palette
+#' @param discrete
+#' @param reverse
+#' @param ...
 #'
 #' @return
 #' @export
@@ -108,6 +110,4 @@ scale_fill_finalrose <- function(palette = "full", discrete = TRUE, reverse = FA
     scale_fill_gradientn(colours = pal(256), ...)
   }
 }
-
-
 
