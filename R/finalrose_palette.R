@@ -30,6 +30,7 @@ finalrose_cols <- function(...) {
   finalrose_colors[cols]
 }
 
+finalrose_cols()
 
 #creating individual palettes
 finalrose_palettes <- list(
@@ -45,7 +46,7 @@ finalrose_palettes <- list(
 
 #' Title
 #'
-#' @param palette
+#' @param palette Character name of palette in finalrose_palettes
 #' @param reverse
 #' @param ...
 #'
