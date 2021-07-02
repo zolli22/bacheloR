@@ -15,7 +15,7 @@ finalrose_colors <- c(
 
 #' Title
 #'
-#' @param ... Character names of firstflower_colors
+#' @param ... Character names of finalrose_colors
 #'
 #' @return
 #' @export

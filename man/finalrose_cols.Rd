@@ -7,7 +7,7 @@
 finalrose_cols(...)
 }
 \arguments{
-\item{...}{Character names of firstflower_colors}
+\item{...}{Character names of finalrose_colors}
 }
 \value{
 
