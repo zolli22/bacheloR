@@ -1,0 +1,8 @@
+"0",""
+"0","ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +"
+"0","    geom_area(alpha = 0.8) +"
+"0","    theme_void() + "
+"0","    theme(legend.position = ""none"") + "
+"0","    scale_fill_finalrose() + "
+"0","    labs(title = ""scale_fill_finalrose"")  "
+"0",""

@@ -1,0 +1,106 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.height = 2,
+  fig.width = 3,
+  message=FALSE, 
+  warning=FALSE
+)
+library(tidyverse)
+library(bacheloR)
+```
+
+# The `bacheloR` Package <img src="figs/hex-bacheloR.png" width="160px" align="right" />
+
+Created by Ingrid Zoll
+  
+
+
+# About the package
+
+
+*This package is still under construction!*  
+`bacheloR` will contain data relating to and color palettes inspired by the TV shows The Bachelor and The Bachelorette.
+
+# Color Palettes  
+
+Currently, `bacheloR` contains two color palettes: `first flower` and `final rose`.  
+
+
+```{r fig.width=4, fig.height=3, echo = FALSE, fig.show = "hold", out.width = "50%"}
+x <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+z <- c("a", "b", "c", "d", "e", "f", "g", "h", "i")
+
+df <- tibble(x, z) %>%
+  mutate(y = 1) %>%
+  mutate(x = as_factor(x))
+
+ggplot(df, aes(x = x, y = y, fill = z))+
+  geom_col()+
+  scale_fill_firstflower()+
+  theme_void()+
+  guides(fill="none")+
+  labs(title = "first flower")
+
+ggplot(df, aes(x = x, y = y, fill = z))+
+  geom_col()+
+  scale_fill_finalrose()+
+  theme_void()+
+  guides(fill="none")+
+  labs(title = "final rose")
+
+```
+
+
+# Installation
+
+```{r}
+library(tidyverse)
+
+# devtools::install_github("zolli22/bacheloR")
+library(bacheloR)
+```
+
+
+# Usage
+
+```{r}
+firstflower_cols()
+finalrose_cols()
+```
+
+
+```{r eval = FALSE}
+finalrose_palettes
+```
+
+```{r, fig.width=4, fig.height=3, echo = FALSE, fig.show = "hold", out.width = "50%"}
+
+data <- gapminder::gapminder %>% 
+    filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Belarus", "United Kingdom",
+                        "Greece", "Spain"))  %>% 
+    mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_firstflower() + 
+    labs(title = "scale_fill_firstflower")  
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_finalrose() + 
+    labs(title = "scale_fill_finalrose")  
+
+```
+
